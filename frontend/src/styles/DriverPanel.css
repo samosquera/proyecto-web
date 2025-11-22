@@ -1,0 +1,113 @@
+.driver-panel {
+  width: 100%;
+}
+
+.driver-panel h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.no-trips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  gap: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.driver-trip-card {
+  border-left: 4px solid var(--primary-color);
+}
+
+.trip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trip-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.trip-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-scheduled {
+  background-color: rgba(100, 116, 139, 0.1);
+  color: var(--stat-neutral);
+}
+
+.status-boarding {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.status-departed {
+  background-color: rgba(15, 81, 50, 0.1);
+  color: var(--success-color);
+}
+
+.status-arrived {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary-color);
+}
+
+.status-cancelled {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--danger-color);
+}
+
+.trip-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.detail-row svg {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.trip-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-actions {
+    flex-direction: column;
+  }
+}

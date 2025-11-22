@@ -1,0 +1,580 @@
+.trip-search {
+  width: 100%;
+  padding: 2rem;
+}
+
+.trip-search h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Alerta informativa con fondo azul-verde */
+.trip-search .alert-info {
+  background-color: var(--bg-accent);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--info-color);
+}
+
+.search-form-card {
+  margin-bottom: 2rem;
+  background-color: var(--bg-secondary);
+  border: none;
+  box-shadow: none;
+  padding: 3rem;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 600px 600px;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.search-form .select-group {
+  width: 100%;
+}
+
+.search-form .select-group .select {
+  width: 100%;
+  padding: 0.875rem 3rem;
+  font-size: 1rem;
+  min-height: 48px;
+  height: 48px;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.search-form .select-group .select option {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  padding: 12px 16px;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-transform: capitalize;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.search-form .select-group .select:disabled {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-transform: none;
+}
+
+/* Mejorar visualización del select cuando está abierto */
+.search-form .select-group .select option[value=""] {
+  color: var(--text-secondary);
+  font-style: italic;
+  text-transform: none;
+}
+
+.search-form .select-group .select option:hover {
+  background-color: var(--bg-accent);
+}
+
+/* Estilo para inputs de fecha en el formulario */
+.search-form .input-group .input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  min-height: 48px;
+  height: 48px;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.search-form .input-group .input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--bg-accent);
+}
+
+.search-form .select-group .select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--bg-accent);
+}
+
+/* Botón de búsqueda redondeado */
+.search-form button {
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  min-height: 48px;
+  height: 48px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-accent);
+  white-space: nowrap;
+}
+
+.search-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.search-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.trips-results h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trip-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.trip-route,
+.trip-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.trip-route {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trip-detail {
+  color: var(--text-secondary);
+}
+
+.trip-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.seat-selection-card {
+  margin-top: 2rem;
+}
+
+.seat-selection-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.seat-btn {
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  position: relative;
+}
+
+/* Estado: Disponible */
+.seat-btn.available {
+  background-color: var(--bg-accent);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.seat-btn.available:hover:not(:disabled) {
+  border-color: var(--primary-hover);
+  background-color: rgba(10, 92, 54, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-accent);
+}
+
+/* Estado: Seleccionado */
+.seat-btn.selected {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-accent);
+}
+
+/* Estado: En reserva (hold) */
+.seat-btn.held {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--warning-color);
+  color: var(--warning-color);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Estado: Ocupado */
+.seat-btn.occupied {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.seat-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* Estilos legacy para compatibilidad */
+.seat-btn.premium {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--warning-color);
+}
+
+.seat-btn.premium.selected {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+/* Sección de reserva de boleto */
+.trip-booking-section {
+  margin-top: 3rem;
+}
+
+.trip-booking-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.trip-details-header {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Timeline de paradas */
+.timeline-card {
+  position: sticky;
+  top: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.timeline-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.route-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-stop {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  z-index: 2;
+}
+
+.timeline-stop.selected-from .timeline-dot {
+  background: var(--gradient-primary);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.timeline-stop.selected-to .timeline-dot {
+  background-color: var(--verdigris);
+  border-color: var(--verdigris);
+  color: white;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  background-color: var(--border-color);
+  margin: 4px 0;
+  min-height: 40px;
+}
+
+.timeline-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.stop-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stop-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stop-btn {
+  padding: 0.375rem 0.75rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.stop-btn:hover:not(:disabled) {
+  background-color: var(--bg-tertiary);
+  border-color: var(--primary-color);
+}
+
+.stop-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.stop-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.segment-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-accent);
+  border: 1px solid var(--mint-leaf);
+  border-radius: var(--radius-md);
+  color: var(--info-color);
+}
+
+/* Contenedor de selección de asientos */
+.seat-selection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.seat-selection-placeholder {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+}
+
+.placeholder-content svg {
+  color: var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.placeholder-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.seat-selection-card .available-count {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.seat-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.legend-box {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-color);
+}
+
+.legend-box.available {
+  background-color: var(--bg-accent);
+  border-color: var(--primary-color);
+}
+
+.legend-box.held {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--warning-color);
+}
+
+.legend-box.occupied {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-color: var(--danger-color);
+}
+
+.legend-box.selected {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Sección de precio */
+.price-display-card {
+  background: var(--gradient-primary);
+  border: none;
+  margin-top: 1rem;
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.price-icon {
+  font-size: 2.5rem;
+  color: #fff;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.price-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.price-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price-amount {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+}
+
+.price-detail {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .search-form-card {
+    max-width: 100%;
+  }
+
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-card {
+    position: static;
+    max-height: none;
+  }
+}

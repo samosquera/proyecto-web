@@ -1,0 +1,216 @@
+.payment-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.payment-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  border-radius: 50%;
+  color: var(--primary-color);
+}
+
+.payment-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.payment-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.payment-card {
+  margin-bottom: 1.5rem;
+}
+
+.payment-form {
+  padding: 1rem 0;
+}
+
+.payment-form h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.payment-form .payment-subtitle {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.validation-message {
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.payment-instructions {
+  padding: 1rem 0;
+}
+
+.payment-instructions h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.instructions-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.instructions-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.instructions-card ol {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.instructions-card ol li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.instructions-card ol li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.bank-details {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.bank-details p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.bank-details p strong {
+  color: var(--text-primary);
+  margin-right: 1rem;
+}
+
+.reference-input {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1.5rem;
+}
+
+.payment-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.ticket-summary {
+  background-color: var(--bg-secondary);
+}
+
+.ticket-summary h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-details p {
+  margin: 0;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.summary-details p:last-child {
+  border-bottom: none;
+}
+
+.summary-details p strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .payment-view {
+    padding: 1rem 0.5rem;
+  }
+
+  .payment-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-actions {
+    flex-direction: column-reverse;
+  }
+
+  .payment-actions button {
+    width: 100%;
+  }
+
+  .bank-details p {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

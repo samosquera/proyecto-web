@@ -1,0 +1,102 @@
+/* Auth Modal Styles */
+.auth-modal-content {
+  width: 100%;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.auth-modal-footer {
+  margin-top: 24px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.auth-modal-footer p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-link-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.auth-link-btn:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Login Method Selector */
+.login-method-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  background: var(--bg-secondary);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.method-btn {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.method-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--text-primary);
+}
+
+.method-btn.active {
+  background: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Helper text for inputs */
+.input-helper {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .auth-form {
+    gap: 14px;
+  }
+
+  .login-method-selector {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .method-btn {
+    width: 100%;
+  }
+}

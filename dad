@@ -1,0 +1,35 @@
+[33mcommit ba955383eb0b5941d18ff3c51d86366921fe3208[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mcontroller-layer[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 29c2a9a b2999bc
+Author: samosquera <mosquerasergio33@gmail.com>
+Date:   Sat Nov 22 01:05:52 2025 -0500
+
+    Merge pull request #2 from samosquera/service-layer
+    
+    Implementación de la capa de servicios
+
+[33mcommit b2999bc5acfd1d35d6e264bbb00325b3a429fcfb[m[33m ([m[1;31morigin/service-layer[m[33m, [m[1;32mservice-layer[m[33m)[m
+Author: samosquera <mosquerasergio33@gmail.com>
+Date:   Sat Nov 22 01:03:27 2025 -0500
+
+    Implementación de la capa de servicios
+
+[33mcommit 29c2a9a9d50625d974a4fb6ceab14abe9a50b8a3[m
+Merge: d4d0f87 20f2fbb
+Author: samosquera <mosquerasergio33@gmail.com>
+Date:   Sat Nov 22 00:52:41 2025 -0500
+
+    Merge pull request #1 from samosquera/persistence-layer
+    
+    Implementación de la capa de persistencia
+
+[33mcommit 20f2fbb779425cfb09ff6da886ceae05b4460c8f[m[33m ([m[1;31morigin/persistence-layer[m[33m, [m[1;32mpersistence-layer[m[33m)[m
+Author: samosquera <mosquerasergio33@gmail.com>
+Date:   Sat Nov 22 00:30:43 2025 -0500
+
+    Implementación de la capa de persistencia
+
+[33mcommit d4d0f8769e195d24656c9eaf966161a145cd35de[m[33m ([m[1;31morigin/security-layer[m[33m, [m[1;31morigin/entity-layer[m[33m, [m[1;31morigin/controller-layer[m[33m, [m[1;32msecurity-layer[m[33m, [m[1;32mentity-layer[m[33m)[m
+Author: samosquera <mosquerasergio33@gmail.com>
+Date:   Fri Nov 21 23:25:09 2025 -0500
+
+    Implementación de entidades

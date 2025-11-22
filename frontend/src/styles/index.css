@@ -1,0 +1,190 @@
+/* Reset y configuración global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Paleta principal - Verde Oscuro y Negro Carbón */
+
+  --dark-emerald: #066839;
+
+  --emerald-depths: #0a5c36;
+
+  --emerald-depths-2: #0f5132;
+
+  --deep-forest: #14452f;
+
+  --evergreen: #18392b;
+
+  --jet-black: #1d2e28;
+
+  --carbon-black: #212224;
+
+ 
+
+  /* Colores funcionales basados en la paleta */
+
+  --primary-color: #0a5c36;        /* Emerald Depths - Color principal */
+
+  --primary-hover: #066839;        /* Dark Emerald - Hover */
+
+  --primary-light: #0f5132;        /* Emerald Depths 2 - Variante clara */
+
+  --accent-color: #14452f;         /* Deep Forest - Color de acento */
+
+  --accent-light: #18392b;         /* Evergreen - Acento suave */
+
+ 
+
+  /* Colores de estado (mantener consistencia funcional) */
+
+  --success-color: #0f5132;        /* Emerald Depths 2 */
+
+  --danger-color: #dc2626;
+
+  --warning-color: #f59e0b;
+
+  --info-color: #0a5c36;           /* Emerald Depths */
+
+
+
+  /* Colores para Stats y Cards (Sistema Unificado) */
+
+  --stat-primary: #0a5c36;         /* Emerald Depths */
+
+  --stat-secondary: #14452f;       /* Deep Forest */
+
+  --stat-success: #0f5132;         /* Emerald Depths 2 */
+
+  --stat-warning: #f59e0b;         /* Warning */
+
+  --stat-info: #066839;            /* Dark Emerald */
+
+  --stat-neutral: #64748b;         /* Text Secondary */
+
+ 
+
+  /* Backgrounds */
+
+  --bg-primary: #ffffff;
+
+  --bg-secondary: #f8fafc;
+
+  --bg-tertiary: #f0f9ff;
+
+  --bg-accent: rgba(10, 92, 54, 0.05);  /* Emerald Depths con opacidad */
+
+  --bg-dark: #1d2e28;               /* Jet Black */
+
+ 
+
+  /* Textos */
+
+  --text-primary: #1e293b;
+
+  --text-secondary: #64748b;
+
+  --text-accent: #0a5c36;          /* Emerald Depths */
+
+  --text-on-dark: #f8fafc;
+
+ 
+
+  /* Bordes */
+
+  --border-color: #e2e8f0;
+
+  --border-accent: #0f5132;        /* Emerald Depths 2 */
+
+ 
+
+  /* Sombras */
+
+  --shadow-sm: 0 1px 2px 0 rgba(6, 104, 57, 0.08);
+
+  --shadow-md: 0 4px 6px -1px rgba(6, 104, 57, 0.12);
+
+  --shadow-lg: 0 10px 15px -3px rgba(6, 104, 57, 0.15);
+
+  --shadow-accent: 0 4px 12px rgba(10, 92, 54, 0.2);
+
+ 
+
+  /* Gradientes */
+
+  --gradient-primary: linear-gradient(135deg, #066839, #0a5c36, #0f5132);
+
+  --gradient-accent: linear-gradient(135deg, #0f5132, #14452f, #18392b);
+
+  --gradient-dark: linear-gradient(135deg, #1d2e28, #212224);
+  /* Radios */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Utilidades */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.hidden {
+  display: none;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
